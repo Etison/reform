@@ -45,7 +45,7 @@ module Reform::Form::Dry
       class Builder < Array
         def initialize(array)
           super(array)
-          @validator = Dry::Validation.Form({}, &shift)
+          @validator = Dry::Validation.Params({}, &shift)
         end
 
         def validation_graph
